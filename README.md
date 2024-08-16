@@ -28,9 +28,4 @@
 
 ### Features
 
-       - Top 10 in category (Top Right symbol)
-   - Infinite Scroll with new sub categories
 
-4. (Netflix GPT Page - Only After Sign in Auth)
-   - Search Bar
-   - Provide Movie Suggestions
