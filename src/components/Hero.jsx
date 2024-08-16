@@ -36,8 +36,6 @@ const Hero = () => {
       document.getElementById("cta").childNodes
     );
 
-    console.log(ctaChildren);
-
     gsap.to(ctaChildren, {
       opacity: 1,
       y: -20,
@@ -47,8 +45,8 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="w-full nav-height bg-black relative">
-      <div className="w-full h-full sm:h-5/6 lg:h-4/6 flex-center flex-col">
+    <section className="w-full h-fit md:nav-height  bg-black">
+      <div className="w-full h-full sm:h-5/6 lg:h-4/6 flex-center flex-col max-md:mt-5">
         <p id="hero" className="hero-title">
           iPhone 15 Pro
         </p>
@@ -66,7 +64,7 @@ const Hero = () => {
       </div>
 
       {/* Buy Button with Price */}
-      <div id="cta" className="flex flex-col justify-center items-center gap-3">
+      <div id="cta" className="flex flex-col  items-center gap-3 max-md:my-6">
         <a
           href="#highlights"
           className="btn font-semibold text-lg flex-1 opacity-0 translate-y-3"
