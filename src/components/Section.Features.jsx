@@ -28,7 +28,7 @@ const Features = () => {
     animateWithGsapScrollTrigger(
       ".animate-features-img",
       { opacity: 1, scale: 1, ease: "power1.inOut", duration: 1 },
-      { start: "top 90%", end: "top top", scrub: true }
+      { start: "top 80%", end: "top top", scrub: true }
     );
 
     animateWithGsapScrollTrigger(
@@ -37,7 +37,7 @@ const Features = () => {
         opacity: 1,
         y: 0,
         ease: "power2.inOut",
-        duration: 0.5,
+        duration: 1,
         stagger: 0.1,
       },
       {
