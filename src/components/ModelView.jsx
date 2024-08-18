@@ -11,11 +11,9 @@ const ModelView = ({
   gsapType,
   controlRef,
   setRotationState,
-  item,
+  model,
   size,
 }) => {
-  console.log(document.querySelector("#camera"));
-
   return (
     <View
       index={index}
@@ -51,7 +49,7 @@ const ModelView = ({
           <IPhone
             className="model"
             scale={index === 1 ? [15, 15, 15] : [17, 17, 17]}
-            item={item}
+            model={model}
             size={size}
           />
         </Suspense>

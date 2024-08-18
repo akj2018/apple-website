@@ -3,24 +3,17 @@ import gsap from "gsap";
 import { rightImg, watchImg } from "../utils";
 import VideoCarousel from "./VideoCarousel";
 import { ScrollTrigger } from "gsap/all";
+import { animateWithGsapScrollTrigger } from "../utils/animations";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Highlights = () => {
   useGSAP(() => {
-    gsap.to(".hero-item", {
-      scrollTrigger: {
-        trigger: ".hero-item",
-        start: "top 85%",
-        end: "top 30%",
-        scrub: true,
-      },
-      opacity: 1,
-      duration: 1,
-      y: 1,
-      stagger: 0.15,
-      ease: "power1.inOut",
-    });
+    animateWithGsapScrollTrigger(
+      ".hero-item",
+      { opacity: 1, duration: 1, y: 1, stagger: 0.15, ease: "power1.inOut" },
+      { trigger: ".hero-item", start: "top 90%", end: "top 50%", scrub: true }
+    );
   }, []);
 
   return (

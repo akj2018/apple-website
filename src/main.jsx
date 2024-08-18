@@ -1,10 +1,17 @@
 import * as Sentry from "@sentry/react";
+import React from "react";
 
 Sentry.init({
   dsn: "https://4531b695586be74a00f45fcfbdb1c0a6@o4507791863840768.ingest.us.sentry.io/4507791865675776",
   integrations: [
     Sentry.browserTracingIntegration(),
-    Sentry.replayIntegration(),
+    Sentry.replayIntegration({
+      maskAllText: false,
+      blockAllMedia: false,
+    }),
+    Sentry.reactRouterV6BrowserTracingIntegration({
+      useEffect: React.useEffect,
+    }),
   ],
   // Tracing
   tracesSampleRate: 1.0, //  Capture 100% of the transactions
@@ -21,7 +28,8 @@ import App from "./App.jsx";
 import "./index.css";
 
 createRoot(document.getElementById("root")).render(
-  <StrictMode>
-    <App />
-  </StrictMode>
+  // <StrictMode>
+  //   <App />
+  // </StrictMode>
+  <App />
 );

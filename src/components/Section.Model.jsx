@@ -8,7 +8,10 @@ import * as THREE from "three";
 import { Canvas } from "@react-three/fiber";
 import { View } from "@react-three/drei";
 import { models, sizes } from "../constants";
-import { animateWithGsapTimeline } from "../utils/animations";
+import {
+  animateWithGsapScrollTrigger,
+  animateWithGsapTimeline,
+} from "../utils/animations";
 
 import { ScrollTrigger } from "gsap/all";
 gsap.registerPlugin(ScrollTrigger);
@@ -56,18 +59,11 @@ const Model = () => {
   }, [size]);
 
   useGSAP(() => {
-    gsap.to("#heading", {
-      opacity: 1,
-      y: 0,
-      duration: 1,
-      scrollTrigger: {
-        trigger: "#heading",
-        start: "top 85%",
-        end: "top 30%",
-        scrub: true,
-      },
-      ease: "power1.inOut",
-    });
+    animateWithGsapScrollTrigger(
+      "#heading",
+      { opacity: 1, y: 0, ease: "power1.inOut" },
+      { trigger: "#heading", start: "top 90%", end: "top 50%", scrub: true }
+    );
   }, []);
 
   const sliderClickHander = (btnType) => {
@@ -103,7 +99,7 @@ const Model = () => {
               gsapType="view1"
               controlRef={cameraControlSmall}
               setRotationState={setSmallRotation}
-              item={model}
+              model={model}
               size={size}
             />
             <ModelView
@@ -112,7 +108,7 @@ const Model = () => {
               gsapType="view2"
               controlRef={cameraControlLarge}
               setRotationState={setLargeRotation}
-              item={model}
+              model={model}
               size={size}
             />
 

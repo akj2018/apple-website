@@ -12,7 +12,8 @@ import { useGLTF, useTexture } from "@react-three/drei";
 
 function IPhone(props) {
   const { nodes, materials } = useGLTF("/models/scene.glb");
-  const texture = useTexture(props.item.img);
+  const { model } = props;
+  const texture = useTexture(model.img);
 
   useEffect(() => {
     Object.entries(materials).map((material) => {
@@ -24,11 +25,11 @@ function IPhone(props) {
         material[0] !== "jlzuBkUzuJqgiAK" &&
         material[0] !== "xNrofRCqOXXHVZt"
       ) {
-        material[1].color = new THREE.Color(props.item.color[0]);
+        material[1].color = new THREE.Color(model.color[0]);
       }
       material[1].needsUpdate = true;
     });
-  }, [materials, props.item]);
+  }, [materials, model]);
 
   return (
     <group {...props} dispose={null}>
