@@ -9,7 +9,7 @@
   <h3 align="center">Iphone 15 Website</h3>
 
    <div align="center">
-     Live Link: 
+    <a href="https://apple-website-puce-beta.vercel.app/" >Live Link</a> (deployed on Vercel)
     </div>
 </div>
 
