@@ -6,6 +6,7 @@ import Model from "./components/Section.Model";
 import Chip from "./components/Section.Chip";
 import Footer from "./components/Section.Footer";
 import * as Sentry from "@sentry/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <Features></Features>
       <Chip></Chip>
       <Footer></Footer>
+      <SpeedInsights />
     </main>
   );
 };
