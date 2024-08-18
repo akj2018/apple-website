@@ -4,6 +4,7 @@ import Hero from "./components/Section.Hero";
 import Highlights from "./components/Section.Highlights";
 import Model from "./components/Section.Model";
 import Chip from "./components/Section.Chip";
+import Footer from "./components/Section.Footer";
 import * as Sentry from "@sentry/react";
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
       <Model></Model>
       <Features></Features>
       <Chip></Chip>
+      <Footer></Footer>
     </main>
   );
 };

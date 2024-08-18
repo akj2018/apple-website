@@ -40,7 +40,6 @@ const VideoCarousel = () => {
       ease: "power1.inOut",
       onComplete: () => {
         // Once the scroll trigger is complete, run this callback
-        console.log("Animation Complete");
         setVideo((prevVideo) => ({
           ...prevVideo,
           startPlay: true,
@@ -54,8 +53,6 @@ const VideoCarousel = () => {
       duration: 1,
       ease: "power2.inOut",
     });
-    console.log(document.querySelector("#slider"));
-    console.log(videoId);
   }, [isEnd, videoId]);
 
   // Deals with playing of the video
@@ -67,8 +64,6 @@ const VideoCarousel = () => {
         startPlay && videoRef.current[videoId].play();
       }
     }
-
-    console.log(loadedData);
   }, [startPlay, videoId, isPlaying, loadedData]);
 
   // Animation to update the progress bar of the video
@@ -161,7 +156,6 @@ const VideoCarousel = () => {
                     handleLoadedMetadata(index, event)
                   }
                   onEnded={() => {
-                    console.log(videoId);
                     return index !== 3
                       ? handleProcess("video-end", index)
                       : handleProcess("video-last");

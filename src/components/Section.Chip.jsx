@@ -30,7 +30,6 @@ const Chip = () => {
       scrollTrigger: {
         trigger: "#chipVideo",
         start: "top 50%",
-        markers: true,
         toggleActions: "play pause resume restart",
       },
       onComplete: () => {
