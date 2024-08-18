@@ -8,6 +8,10 @@
 
   <h3 align="center">Iphone 15 Website</h3>
 
+
+https://github.com/user-attachments/assets/2c117095-1288-44e4-8835-58a840350c31
+
+
    <div align="center">
     <a href="https://apple-website-puce-beta.vercel.app/" >Live Link</a> (deployed on Vercel)
     </div>
