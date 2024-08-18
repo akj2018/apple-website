@@ -19,7 +19,6 @@ const Features = () => {
         trigger: "#exploreVideo",
         toggleActions: "play pause reverse restart",
         start: "-10% bottom",
-        markers: true,
       },
       onComplete: () => {
         videoRef.current.play();
@@ -49,7 +48,7 @@ const Features = () => {
   }, []);
 
   return (
-    <section className="h-full w-full common-padding bg-zinc overflow-hidden relative">
+    <section className="h-full w-full common-padding bg-zinc overflow-hidden">
       <div className="screen-max-width">
         {/* Section Title */}
         <h1 className="section-heading mb-12 w-full" id="features-title">
